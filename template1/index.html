@@ -1,30 +1,191 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <title>Title</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-  <body>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description"
+    content="Animated JavaScript navigation component based on Raphaël.js (SVG/VML). It can be a pie menu (radial menu, circular menu) and many more." />
+  <meta name="keywords" content="javascript wheel navigation pie-menu radial-menu svg vml" />
+  <meta name="author" content="gabor.berkesi@softwaretailoring.net" />
+  <link rel="shortcut icon" href="wheelnav_favicon.png">
 
-    <div class="container">
+  <title>wheelnav.js - spinning ever</title>
+
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
+    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+  <!-- Just for debugging purposes. Don't actually copy this line! -->
+  <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  <link href="index.css" rel="stylesheet">
 
 
+</head>
+<!-- NAVBAR
+================================================== -->
 
+<body>
 
+  <!-- Marketing messaging and featurettes
+    ================================================== -->
+  <!-- Wrap the rest of the page in another container to center all the content. -->
+
+  <div class="container">
+
+    <!-- START THE FEATURETTES -->
+
+    <div class="row">
+      <div class="col-md-5">
+        <div id="indexDiv" class="wheelNav400"></div>
+      </div>
+      <div class="col-md-7">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" id="tabDefaultNav" hidden="hidden">
+          <li class="active"><a href="#tabExperience" data-toggle="tab">Experiência</a></li>
+          <li><a href="#tabLocalization" data-toggle="tab">Localização</a></li>
+          <li><a href="#tabMethodology" data-toggle="tab">Metodologia</a></li>
+          <li><a href="#tabSupport" data-toggle="tab">Suporte</a></li>
+          <li><a href="#tabTechnology" data-toggle="tab">Tecnologia</a></li>
+          <li><a href="#tabSolutions" data-toggle="tab">Soluções</a></li>
+          <li><a href="#tabAlliances" data-toggle="tab">Alianças</a></li>
+          <li><a href="#tabCertifications" data-toggle="tab">Certificações</a></li>
+          <li><a href="#tabCulture" data-toggle="tab">Cultura</a></li>
+          <li><a href="#tabEnvironment" data-toggle="tab">Meio Ambiente</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+
+          <div class="tab-pane fade in active" id="tabExperience">
+            <h2 class="featurette-heading">
+              Cadia, o primeiro parceiro NAV no Brasil.
+              <br />
+              <span class="text-muted">19 anos de experiência a seu serviço.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabLocalization">
+            <h2 class="featurette-heading">
+              NAV e Business Central adaptados para o Brasil.
+              <br />
+              <span class="text-muted">Localização mais utilizada, estável e atualizada.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabMethodology">
+            <h2 class="featurette-heading">
+              Metodologia adaptada.
+              <br />
+              <span class="text-muted">Nem todas as metodologias são válidas e eficazes para todos os clientes.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabSupport">
+            <h2 class="featurette-heading">
+              Um Departamento de Suporte
+              <br />
+              <span class="text-muted">com atendimento personalizado e na medida de suas necessidades.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabTechnology">
+            <h2 class="featurette-heading">
+              Soluções digitais possibilitam o trabalho remoto
+              <br />
+              <span class="text-muted">e podem tornar sua empresa ainda mais competitiva.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabSolutions">
+            <h2 class="featurette-heading">
+              Juntos na transformação digital,
+              <br />
+              <span class="text-muted">uma questão de sobrevivência para as empresas.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabAlliances">
+            <h2 class="featurette-heading">
+              Alianças construídas com parceiros nacionais e internacionais.
+              <br />
+              <span class="text-muted">Trabalhando em equipe para seu benefício.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabCertifications">
+            <h2 class="featurette-heading">
+              Certificações:
+              <br />
+              <span class="text-muted">profissionais formados e produtos testados para oferecer qualidade.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabCulture">
+            <h2 class="featurette-heading">
+              Cultura Cadia:
+              <br />
+              <span class="text-muted">nossa maneira de ser, melhora nossa maneira de trabalhar.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+          
+          <div class="tab-pane fade" id="tabEnvironment">
+            <h2 class="featurette-heading">
+              Preocupação com as pessoas e o planeta:
+              <br />
+              <span class="text-muted">uma necessidade que pode gerar lucro empresarial com ações práticas.</span>
+            </h2>
+            <p class="lead"><a href="#" class="btn btn-lg btn-default btn-link">Leia Mais</a></p>
+          </div>
+
+        </div>
+
+      </div>
     </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-    <script src="scripts.js"></script>
-  </body>
+    <!-- /END THE FEATURETTES -->
+
+  </div><!-- /.container -->
+
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script src="raphael.min.js"></script>
+  <script src="raphael.icons.min.js"></script>
+  <script src="wheelnav.min.js"></script>
+  <script src="documentation.js"></script>
+  <script src="index.js"></script>
+
+</body>
+
 </html>
